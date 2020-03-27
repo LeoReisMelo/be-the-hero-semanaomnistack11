@@ -8,9 +8,10 @@ import logoImg from '../../assets/logo.png';
 
 export default function Incidents(){
     const navigation = useNavigation();
-    const message = `Olá ${incident.name}, estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" com o valor de ${Intl.NumberFormat('pt-BR',{style:'currency' , currency:'BRL'}).format(incident.value)}`;
     const route = useRoute();
     const incident = route.params.incident;
+    const message = `Olá ${incident.name}, estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" com o valor de ${Intl.NumberFormat('pt-BR',{style:'currency' , currency:'BRL'}).format(incident.value)}`;
+    
 
     function navigateBack(){
         navigation.goBack();
@@ -42,7 +43,7 @@ export default function Incidents(){
                  <Text style={[styles.incidentProperty,{marginTop:0}]}>ONG:</Text>
                  <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
 
-                 <Text style={styles.incidentProperty, {marginTop:0}}>CASO:</Text>
+                 <Text style={styles.incidentProperty}>CASO:</Text>
                  <Text style={styles.incidentValue}>{incident.description}</Text>
 
                  <Text style={styles.incidentProperty}>VALOR:</Text>
