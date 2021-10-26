@@ -1,6 +1,6 @@
 # Be The Hero - Semana Omnistack
 
-## 🚀 Instalando ecoleta
+## 🚀 Instalando be-the-hero
 
 Para instalar o be-the-hero, siga estas etapas:
 
